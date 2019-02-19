@@ -48,7 +48,7 @@ $operations.forEach(op =>
 
 const $equal = document.querySelector('#equal')
 $equal.addEventListener('click', e => {
-  if (operation && memory && getValue().length > 0) {
+  if (operation && (memory || memory === 0) && getValue().length > 0) {
     const value = parseFloat(getValue())
     let result
     switch (operation) {
