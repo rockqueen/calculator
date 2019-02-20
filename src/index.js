@@ -12,8 +12,9 @@ $numbers.forEach(number =>
 
 const $dot = document.querySelector('#dot')
 $dot.addEventListener('click', e => {
-  if (getValue().indexOf('.') === -1) {
-    if (getValue().length === 0) {
+  const value = getValue()
+  if (value.indexOf('.') === -1) {
+    if (value.length === 0 || value === '-') {
       appendValue(0)
     }
     appendValue('.')
