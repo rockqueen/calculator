@@ -34,15 +34,19 @@ $reset.addEventListener('click', e => {
 let operation
 let memory
 
+function hasState() {
+  return operation && (memory || memory === 0)
+}
+
 const $operations = document.querySelectorAll('.operation')
 $operations.forEach(op =>
   op.addEventListener('click', ({target}) => {
-    if (getValue().length > 0) {
+    if (getValue().length > 0 && !hasState()) {
       operation = target.textContent
       memory = parseFloat(getValue())
       setValue('')
       setHistory(memory, operation)
-    } else if ((memory || memory === 0) && operation) {
+    } else if (hasState()) {
       operation = target.textContent
       setHistory(memory, operation)
     }
@@ -51,7 +55,7 @@ $operations.forEach(op =>
 
 const $equal = document.querySelector('#equal')
 $equal.addEventListener('click', e => {
-  if (operation && (memory || memory === 0) && getValue().length > 0) {
+  if (hasState() && getValue().length > 0) {
     const value = parseFloat(getValue())
     let result
     switch (operation) {
