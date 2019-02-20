@@ -42,6 +42,9 @@ $operations.forEach(op =>
       memory = parseFloat(getValue())
       setValue('')
       setHistory(memory, operation)
+    } else if ((memory || memory === 0) && operation) {
+      operation = target.textContent
+      setHistory(memory, operation)
     }
   })
 )
