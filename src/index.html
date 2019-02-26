@@ -4,38 +4,46 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
+    <title>Calculator</title>
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <fieldset id="container">
-      <legend>Calculator</legend>
-      <pre id="history">&nbsp;</pre>
-      <input type="text" id="value" readonly />
-      <br />
-      <button class="number">9</button>
-      <button class="number">8</button>
-      <button class="number">7</button>
-      <button class="operation">+</button>
-      <br />
-      <button class="number">6</button>
-      <button class="number">5</button>
-      <button class="number">4</button>
-      <button class="operation">-</button>
-      <br />
-      <button class="number">3</button>
-      <button class="number">2</button>
-      <button class="number">1</button>
-      <button class="operation">*</button>
-      <br />
-      <button id="dot">.</button>
-      <button id="revert">+/-</button>
-      <button class="number">0</button>
-      <button class="operation">/</button>
-      <br />
-      <button id="equal">=</button>
-      <button id="reset">C</button>
-    </fieldset>
+    <div id="container">
+      <fieldset id="main">
+        <legend>Calculator</legend>
+        <pre id="history">&nbsp;</pre>
+        <input type="text" id="value" readonly />
+        <br />
+        <button class="number">9</button>
+        <button class="number">8</button>
+        <button class="number">7</button>
+        <button class="operation">+</button>
+        <br />
+        <button class="number">6</button>
+        <button class="number">5</button>
+        <button class="number">4</button>
+        <button class="operation">-</button>
+        <br />
+        <button class="number">3</button>
+        <button class="number">2</button>
+        <button class="number">1</button>
+        <button class="operation">*</button>
+        <br />
+        <button id="dot">.</button>
+        <button id="revert">+/-</button>
+        <button class="number">0</button>
+        <button class="operation">/</button>
+        <br />
+        <button id="equal">=</button>
+        <button id="reset">C</button>
+      </fieldset>
+      <p>
+        <br />
+        Copyright &copy; D.P. 2019
+        <br />
+        <a href="https://github.com/rockqueen/calculator">Source code</a>
+      </p>
+    </div>
     <script src="./index.js"></script>
   </body>
 </html>
